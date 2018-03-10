@@ -1,0 +1,111 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function validate_required(field,alerttxt)
+{
+with (field)
+  {
+  if (value==null||value=="")
+    {alert(alerttxt);return false}
+  else {return true}
+  }
+}
+
+function validate_form(thisform)
+{
+with (thisform)
+  {
+  if (validate_required(email,"Email must be filled out!")==false)
+    {email.focus();return false}
+  }
+}
+</script>
+</head>
+
+<body>
+<form action="submitpage.htm" onsubmit="return validate_form(this)" method="post">
+Email: <input type="text" name="email" size="30">
+<input type="submit" value="Submit"> 
+</form>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------
+-----------------------------------------------
+   function validate_required(filed,alerttxt)
+        {
+        	if(value==null||value='')
+        	{
+        		alert(alerttxt);
+        		return false
+        	}
+        	else
+        	return true
+        }
+        function Check_User_Login (thisform) {
+        	with(thisform)
+        	{
+        		if(validate_required(Email,'手机号不能为空')==false)
+        		{
+        			email.focus();
+        			return true
+        		}
+        	}
+        }
+
+
+
+
+
+-----------------------------------------------
+-----------------------------------------------
+                    <!-- 注册 -->
+                    <div id="registerPane" class="tab-pane login-panel fade in active">
+                        <div class="login-notice" id="Enr" style="display:none;"></div>
+                        <div class="form-group">
+                            <div class="email_autocomplete1"><input name="Email" autocomplete="off" placeholder="请填写您的手机号码" nodetype="email" id="Email" config="{width:304,height:40}" type="text"></div>
+                        </div>
+                        <div class="form-group">
+                            <input name="PassWord" id="PassWord" class="form-control" placeholder="密码" type="password">
+                        </div>
+                        <div class="form-group">
+                            <input id="RexPassWord" name="RexPassWord" class="form-control" placeholder="再次输入密码" type="password">
+                              
+                        </div>
+                        <div class="form-group">
+                         <input id="useraddress" name="useraddress" maxlength="30" class="form-control" placeholder="寄货地址" type="text">
+                        </div>
+                       <div class="form-group verify">
+                            <input name="action" value="reg" type="hidden">
+                            <input id="username" name="username" maxlength="4" class="form-control" placeholder="真实姓名" type="text">
+                        </div>
+                        <button class="btn btn-primary btn-lg btn-block" type="button" onclick="return Check_User_Login(this);">立即注册</button>
+                    </div>
+
+-----------------------------------------------
+-----------------------------------------------
+
+  <ul>
+            <li><a href="#" target="_blank"><span class="ico ico-server-w1"></span>十三年品牌</a></li>
+            <li><a href="#" target="_blank"><span class="ico ico-server-w2"></span>销量领先</a></li>
+            <li><a href="#" target="_blank"><span class="ico ico-server-w3"></span>百万客户信赖</a></li>
+            <li><a href="#" target="_blank"><span class="ico ico-server-w4"></span>时尚原创花艺</a></li>
+            <li><a href="#" target="_blank"><span class="ico ico-server-w5"></span>订单实拍</a></li>
+            <li><a href="#" target="_blank"><span class="ico ico-server-w6"></span>低价保障</a></li>
+            <li><a href="#" target="_blank"><span class="ico ico-server-w7"></span>3小时配送</a></li>
+            <li class="last-child"><a href="#" target="_blank"><span class="ico ico-server-w8"></span>200%退赔承诺</a></li>
+        </ul>
+
+-----------------------------------------------
+-----------------------------------------------

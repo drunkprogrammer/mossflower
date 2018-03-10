@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>会员注册-mossflower</title>
+    <meta name="description" content="送最美的花给最美的她">
+    <meta name="keywords" content="最懂你的鲜花网站">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">																																												
+    <meta name="renderer" content="webkit|ie-comp">
+		 <script src="../src/js/jquery-1.8.3.js"></script>
+		 <script src="../src/js/hm.js"></script>
+         <link type="text/css" rel="stylesheet" href="../src/css/common.css">
+         <link type="text/css" rel="stylesheet" href="../src/css/public.css">
+         <link type="text/css" rel="stylesheet" href="../src/css/register.css">
+         <link rel="stylesheet" href="../src/css/layer.css" id="layuicss-skinlayercss"></head>
+		
+		<script>
+			/*function register()
+			{
+			  $.ajax({
+  
+                type: "POST",//方法类型
+                dataType: "json",//预期服务器返回的数据类型
+                url: "./simple.html" ,//url
+                data: $('#form1').serialize(),
+                success: function (result) {
+                    console.log(result);//打印服务端返回的数据(调试用)
+                    if (result.resultCode == 200) {
+                        alert("SUCCESS");
+                    }
+                    ;
+                },
+                error : function() {
+                    alert("异常！");
+                }
+            });
+			}*/
+		</script>
+	</head>
+	<body >
+    <div class="site-nav">
+        <div class="container">
+            <ul class="site-nav-l">
+                <li class="menu dropdown">
+                    <a href="javascript:void(0)" data-hover="dropdown" data-delay="0"><span class="ico ico-weixin"></span>关注微信</a>
+                    <div class="dropdown-menu dropdown-weixin">
+                        <p>扫码关注<br>回复"礼物" 更多惊喜！</p>
+                    </div>
+                </li>
+                <li class="menu dropdown">
+                
+                    <div class="dropdown-menu dropdown-weixin">
+                        <p>新人专享100元APP礼包</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="site-nav-r">
+                <!--登陆状态信息显示start-->
+                <li class="menu login" id="LoginInfo"><a href="/html/login.htm?backUrl=/html/login.htm" rel="nofollow">你好，请登录</a><a href="/html/register.html" rel="nofollow">注册</a></li>
+                <!--登陆状态信息显示end-->    
+            </ul>
+        </div>
+    </div>
+
+<div class="login-wrapper">
+		<div class="container">
+		  <div class="login-box">
+		    <div id="phoneRegisterPane" class="tab-pane login-panel fade in active">
+                   <div class="login-notice" id="phoneErr" style="display:none;"></div>
+			           <form method="post" id="form1" action="../jsp/Uregister.jsp">
+                        <div class="login-notice" id="Enr" style="display:none;"></div>
+                        <div class="form-group">
+                            <div class="phone_accept"><input name="phone" autocomplete="off" placeholder="请填写您的手机号码" nodetype="phone" id="phone" config="{width:304,height:40}" type="text"></div>                       
+                        </div>
+                        <div class="form-group">
+                            <input name="PassWord" id="PassWord" class="form-control" placeholder="密码" type="password">
+                        </div>
+                        <div class="form-group">
+                            <input id="RexPassWord" name="RexPassWord" class="form-control" placeholder="再次输入密码" type="password">
+                              
+                        </div>
+                        <div class="form-group">
+                         <input id="useraddress" name="useraddress" maxlength="30" class="form-control" placeholder="寄货地址" type="text">
+                        </div>
+                       <div class="form-group verify">
+                            <input name="action" value="reg" type="hidden">
+                            <input id="username" name="username" maxlength="4" class="form-control" placeholder="真实姓名" type="text">
+                        </div>
+                        <input type="submit" value="立即注册" onclick="validate_form(this)" class="btn btn-primary"></input>
+              
+              </form>
+		    </div>
+		  </div>
+		</div>
+</div>		
+	</body>
+	<script>
+		function validate_required(field,alerttxt)
+{
+with (field)
+  {
+  if (value==null||value=="")
+    {alert(alerttxt);return false}
+  else {return true}
+  }
+}
+
+function validate_form(thisform)
+{
+with (thisform)
+  {
+  if (validate_required(phone,"phone must be filled out!")==false)
+    {phone.focus();return false}
+  }
+}
+        
+	</script>
+</html>

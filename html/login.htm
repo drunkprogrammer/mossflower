@@ -1,0 +1,462 @@
+<!DOCTYPE html>	
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>会员登录-mossflower</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit|ie-comp">
+    
+    <script charset="utf-8" src="../src/js/v.js"></script><script src="../src/js/hm.js"></script><script type="text/javascript" src="../src/js/CheckAgent"></script>
+    <link rel="icon" href="https://www.hua.com/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+    
+    <link type="text/css" rel="stylesheet" href="../src/css/common.css">
+    <link type="text/css" rel="stylesheet" href="../src/css/public.css">
+    <link type="text/css" rel="stylesheet" href="../src/css/Login.css">
+
+
+    <!--[if lt IE 9]>
+        <script src="//img02.hua.com/pc/assets/js/html5shiv.min.js"></script>
+    <![endif]-->
+<link rel="stylesheet" href="../src/css/layer.css" id="layuicss-skinlayercss"></head>
+<body class="home">
+    <!-- 顶部导航 -->
+    
+    <div class="site-nav">
+        <div class="container">
+
+
+
+        <!-- 收藏mossflower -->
+            <ul class="site-nav-l">
+                 <li class="menu dropdown">
+                    <a href="javascript:void(0)" data-hover="dropdown" data-delay="0"><span class="ico ico-weixin"></span>关注微信</a>
+                    <div class="dropdown-menu dropdown-weixin">
+                        <img src="//img02.hua.com/pc/pimg/wechat_qrcode.jpg" height="124" width="124">
+                        <p>扫码关注<br>回复"礼物" 更多惊喜！</p>
+                    </div>
+                </li>               
+            </ul>
+
+
+            <ul class="site-nav-r">
+                <!--登陆状态信息显示start-->
+                <li class="menu login" id="LoginInfo"><a href="https://www.hua.com/Passport/Login/?backUrl=https://www.hua.com/Passport/Login/?backUrl=https://www.hua.com/?sid=pzbp" rel="nofollow">你好，请登录</a><a href="https://www.hua.com/Passport/Register/" rel="nofollow">注册</a></li>
+                <!--登陆状态信息显示end-->
+                <li class="site-nav-pipe">|</li>
+                <li class="menu">
+                    <a href="https://www.hua.com/help/ordercx/" rel="nofollow" target="_blank">订单查询</a>
+                </li>
+                <li class="menu dropdown">
+                    <div class="dropdown-menu dropdown-service">
+                        <a href="https://www.hua.com/member/payment/balancefill" target="_blank">在线付款</a>
+                    </div>
+                </li>
+                <li class="site-nav-pipe">|</li>
+
+                <!--购物车信息显示start-->
+                <li class="menu dropdown">
+                    <a href="https://www.hua.com/shopping/showcart/" data-hover="dropdown" data-delay="0" rel="nofollow" target="_blank" aria-expanded="false"><span class="ico ico-cart"></span>购物车<span class="text-primary" id="gwcCount">(0)</span><span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                    <div class="dropdown-menu dropdown-cart" id="CartInfo"><div class="empty">您的购物车中没有商品，<a href="https://www.hua.com/">先去选购吧</a>！</div></div>
+                </li><!--购物车信息显示end-->
+              </ul>
+        </div>
+    </div>
+    <!-- 顶部导航 End -->
+    <!-- 头部 -->
+    <header>
+        <div class="logo">
+            <h1><a href="#" class="logo-bd">中国鲜花礼品网(陌上花开网)</a></h1>
+            
+            
+<div class="delivery-city">
+    <div class="dropdown csqh">
+        欢迎登录
+    </div>
+</div>
+
+        </div>
+        <div class="search">
+            <form name="i_search" method="post" action="https://www.hua.com/search/">
+                <div class="input-group">
+                    <input name="keyword" type="text" class="form-control" placeholder="商品关键词">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button" onclick="this.form.submit()">搜索</button>
+                    </span>
+                </div>
+            </form>
+            
+        </div>
+    </header>
+    <!-- 头部 End -->
+    
+
+
+
+<div class="login-wrapper">
+    <div class="container">
+        <div class="login-box">
+            <!-- 登录/注册tab -->
+            <ul class="login-tabs">
+                <li class="active"><a href="javascript:void(0)">登录</a></li>
+                <li><a href="register.html">注册</a></li>
+            </ul>
+            <!-- 登录/注册tab End -->
+            <form name="myForm" id="myForm" action="https://www.hua.com/Passport/Login/" method="post" style="display:block;">
+
+                <div class="tab-content">
+                    <!-- 普通登录 -->
+                    <div id="loginPane" class="tab-pane login-panel fade in active">
+                        <!--登录信息提示区begin-->
+                        <div class="login-notice" id="Enr">
+                        </div>
+                        <!--登录信息提示区 end-->
+                        <div class="form-group" style="margin-top: 20px">
+                            <label class="sr-only" for="InputUser">用户名</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="ico ico-user"></span></div>
+                                <div class="email_autocomplete1">
+                                    <input name="user_account" autocomplete="off" placeholder="手机号" nodetype="email" type="text" id="user_account" config="{width:267,height:40}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-top: 20px">
+                            <label class="sr-only" for="Inputuser_password">密码</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="ico ico-lock"></span></div>
+                                <div class="email_autocomplete1"><input name="user_password" autocomplete="off" placeholder="用户密码" type="user_password" id="user_password"></div>
+                            </div>
+                        </div>
+
+                        <div class="checkbox">
+                            <input type="hidden" name="DoIt" value="ok">
+                            <input type="hidden" id="backUrl" name="backUrl" value="https://www.hua.com/?sid=pzbp">
+                            <label style="display:none;">
+                                <input type="checkbox" name="autologin" id="autologin" onclick="ShowAutoLogin()" value="1"> 一个月内自动登录
+                            </label>
+                        </div>
+
+                        <button class="btn btn-primary btn-lg btn-block" type="button" style="margin-top:  30px" onclick="return Check_User_Login()" id="dosubmit">登　录</button>
+                        <button class="btn btn-primary btn-lg btn-block" type="button" disabled="disabled" style="display:none;" id="submiting">登录中...</button>
+                    </div>
+                    <!-- 普通登录 End -->
+                </div>
+            </form>
+           
+        </div>
+    </div>
+</div> 
+<div class="modal fade com-modal" id="user_passwordModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">你第一次使用该手机号登录，请先验证。</h4>
+            </div>	
+        </div>
+    </div>
+</div>
+    <!--底部-->
+    <!-- 尾部导航 -->
+    <!-- <div class="footer-nav">
+        <a href="https://www.hua.com/">首页</a> <b>|</b> <a href="https://www.hua.com/profile/about.htm" target="_blank">关于我们</a>  
+    </div> -->
+    <!-- 尾部导航 End -->
+    <!-- 通用尾部 -->
+    <footer>
+   
+    </footer>
+    <!-- 通用尾部 End -->
+    <!-- 弹出窗口-->
+    
+    <!-- 弹出窗口end-->
+    
+        <script type="text/javascript" src="../src/js/common.js"></script>
+    
+    <script src="../src/js/mailautocomplete.js"></script>
+    <script language="javascript">
+        //窗口操作开始
+        $('#user_passwordModal').modal({ backdrop: 'static', keyboard: false, show: false });
+        $('#user_passwordModal').on('shown.bs.modal', function () {
+            var $this = $(this);
+            var $modal_dialog = $this.find('.modal-dialog');
+            $this.css('display', 'block');
+            $modal_dialog.css({ 'margin-top': Math.max(0, ($(window).height() - $modal_dialog.height()) / 2) });
+        });
+        $('#user_passwordModal').on('hidden.bs.modal', function () {
+            $("#attPage").attr("src", "");
+        });
+
+
+        // 检测手机是否可用
+        function DoValidPhone(phone) {
+            $('#user_passwordModal').modal('show');
+            $("#attPage").attr('src', '/Passport/Login/ValidPhone?phone=' + phone + "&ReturnUrl=" + $("#backUrl").val());
+        }
+
+        function RefreshImage(valImageId) {
+            var objImage = document.getElementById(valImageId)
+            if (objImage == undefined) {
+                return;
+            }
+            var now = new Date();
+            objImage.src = '/Passport/Login/BaseImageValidCode?x=' + now.toUTCString();
+        }
+
+        //窗口操作结束
+        function Check_Email() {
+            HideTips();
+            var Email = document.getElementById("user_account");
+            if (document.getElementById("user_account").value.length < 1) {
+                ShowTips("请输入你的手机号码");
+                return false;
+            } else if (!/^[\w-]+(\.[\w-]+)*@[\w-]+(\.(\w)+)*(\.(\w){2,3})$/.test(document.getElementById("user_account").value) && !(/^\s*1\d{10}\s*$/gi).test(document.getElementById("user_account").value)) {
+                ShowTips("请输入有效的手机号码");
+                return false;
+            }
+            return true;
+        }
+
+        function Check_user_password() {
+            HideTips();
+            var user_password = document.getElementById("user_password");
+            if (user_password.value.length < 6) {
+                ShowTips("请输入密码，密码不能小于6位！");
+                return false;
+            }
+            return true;
+        }
+
+        //提交再次验证
+        function Check_User_Login() {
+            HideTips();
+            var mail = document.getElementById("user_account").value;
+            var pwd = document.getElementById("user_password").value;
+
+            $("#dosubmit").hide();
+            $("#submiting").show();
+            if (!Check_Email() && !(/^\s*1\d{10}\s*$/gi).test(mail)) {
+                ShowTips("请输入有效的手机号码");
+                $("#submiting").hide();
+                $("#dosubmit").show();
+                return false;
+            }
+
+            if (!Check_user_password()) {
+                $("#submiting").hide();
+                $("#dosubmit").show();
+                return false;
+            }
+    
+            if ((/^\s*1\d{10}\s*$/gi).test(mail)) {
+                document.getElementById("user_password").value = encode64(pwd);
+                //mail为手机号
+                var rmd = Math.random();
+                $.ajax({
+                    type: "GET",
+                    url: "/Passport/Login/IsValidPhone",
+                    data: "mail=" + mail + "&pwd=" + pwd,
+                    async: false,
+                    success: function (data) {
+                        if (data == "1") {
+                            DoValidPhone(mail);
+                            $("#submiting").hide();
+                            $("#dosubmit").show();
+                            return false;
+                        }
+                        else if (data == "-1") {
+                            ShowTips("你输入的登录名或者密码错误");
+                            $("#submiting").hide();
+                            $("#dosubmit").show();
+                            return false;
+                        }
+                        else {
+                            $("#myForm").submit();
+                        }
+                    }
+                });
+            }
+            else {
+                document.getElementById("user_password").value = encode64(pwd);
+                // 输入的是邮箱就直接提交表单
+                $("#myForm").submit();
+            }
+
+        }
+
+        function ShowTips(nr) {
+            $("#Enr").html("<div class=\"notice-cont\"><span class=\"ico ico-notice\"></span>" + nr + "</div>");
+        }
+
+        function HideTips() {
+            $("#Enr").html("");
+        }
+
+        function ShowAutoLogin() {
+            if ($("#autologin").is(":checked")) {
+                ShowTips("公共场所不建议自动登录,以防账号丢失");
+            }
+            else {
+                HideTips();
+            }
+        }
+
+        function SetPlaceHolder() {
+            var oForm1 = document.getElementById("myForm");
+            if ($("#myForm").is(":hidden"))
+            {
+                oForm1 = document.getElementById("myForm2");
+            }
+            var oForm1Inputs = oForm1.getElementsByTagName('input');
+            for (var i = 0; i < oForm1Inputs.length; i++) {
+                placeHolder(oForm1Inputs[i], true);
+            }
+        }
+
+        function placeHolder(obj, span) {
+            if (!obj.getAttribute('placeholder')) return;
+            var imitateMode = span === true ? true : false;
+            var supportPlaceholder = 'placeholder' in document.createElement('input');
+            if (!supportPlaceholder) {
+                var defaultValue = obj.getAttribute('placeholder');
+                if (!imitateMode) {
+                    obj.onfocus = function () {
+                        (obj.value == defaultValue) && (obj.value = '');
+                        obj.style.color = '';
+                    }
+                    obj.onblur = function () {
+                        if (obj.value == defaultValue) {
+                            obj.style.color = '';
+                        } else if (obj.value == '') {
+                            obj.value = defaultValue;
+                            obj.style.color = '#A6A6A6';
+                        }
+                    }
+                    obj.onblur();
+                } else {
+                    var placeHolderCont = document.createTextNode(defaultValue);
+                    var oWrapper = document.createElement('span');
+                    oWrapper.style.cssText = 'position:absolute; color:#A6A6A6; display:inline-block; overflow:hidden;';
+                    oWrapper.className = 'wrap-placeholder';
+                    oWrapper.style.fontFamily = getStyle(obj, 'fontFamily');
+                    oWrapper.style.fontSize = getStyle(obj, 'fontSize');
+                    oWrapper.style.marginLeft = parseInt(getStyle(obj, 'marginLeft')) ? parseInt(getStyle(obj, 'marginLeft')) + 3 + 'px' : 3 + 'px';
+                    oWrapper.style.marginTop = parseInt(getStyle(obj, 'marginTop')) ? getStyle(obj, 'marginTop') : 1 + 'px';
+                    oWrapper.style.paddingLeft = getStyle(obj, 'paddingLeft');
+                    oWrapper.style.width = obj.offsetWidth - parseInt(getStyle(obj, 'marginLeft')) + 'px';
+                    oWrapper.style.height = obj.offsetHeight + 'px';
+                    oWrapper.style.lineHeight = obj.nodeName.toLowerCase() == 'textarea' ? '' : obj.offsetHeight + 'px';
+                    oWrapper.appendChild(placeHolderCont);
+                    obj.parentNode.insertBefore(oWrapper, obj);
+                    oWrapper.onclick = function () {
+                        obj.focus();
+                    }
+
+                    changeHandler();
+
+                    if (typeof (obj.oninput) == 'object') {
+                        obj.addEventListener("input", changeHandler, false);
+                    } else {
+                        obj.onpropertychange = changeHandler;
+                    }
+                    function changeHandler() {
+                        oWrapper.style.display = obj.value != '' ? 'none' : 'inline-block';
+                    }
+
+                    function getStyle(obj, styleName) {
+                        var oStyle = null;
+                        if (obj.currentStyle)
+                            oStyle = obj.currentStyle[styleName];
+                        else if (window.getComputedStyle)
+                            oStyle = window.getComputedStyle(obj, null)[styleName];
+                        return oStyle;
+                    }
+                }
+            }
+        }
+
+        $("#user_account").change(function () {
+            placeHolder(this, true);
+        });
+
+        //回车键
+        document.onkeydown = function (event) {
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            if (e && e.keyCode == 13) {
+                var isFocus = $("#user_account").is(":focus");
+                if (isFocus) {
+                    $("#user_password").focus();
+                    return false;
+                }
+                else {
+                    Check_User_Login();
+                }
+            }
+        };
+
+        function encode64(pwd) {
+            var keyStr = "ABCDEFGHIJKLMNOP" + "QRSTUVWXYZabcdef" + "ghijklmnopqrstuv"
+                    + "wxyz0123456789+/" + "=";
+            var output = "";
+            var chr1, chr2, chr3 = "";
+            var enc1, enc2, enc3, enc4 = "";
+            var i = 0;
+            do {
+                chr1 = pwd.charCodeAt(i++);
+                chr2 = pwd.charCodeAt(i++);
+                chr3 = pwd.charCodeAt(i++);
+                enc1 = chr1 >> 2;
+                enc2 = ((chr1 & 3) << 4) | (chr2 >> 4);
+                enc3 = ((chr2 & 15) << 2) | (chr3 >> 6);
+                enc4 = chr3 & 63;
+                if (isNaN(chr2)) {
+                    enc3 = enc4 = 64;
+                } else if (isNaN(chr3)) {
+                    enc4 = 64;
+                }
+                output = output + keyStr.charAt(enc1) + keyStr.charAt(enc2)
+                        + keyStr.charAt(enc3) + keyStr.charAt(enc4);
+                chr1 = chr2 = chr3 = "";
+                enc1 = enc2 = enc3 = enc4 = "";
+            } while (i < pwd.length);
+
+            return output;
+        }
+    </script>
+
+
+    <script type="text/javascript" src="../src/js/statesandright.js"></script>
+    <script src="../src/js/layer.js"></script>
+    <script type="text/javascript">
+        var userId = 0;
+        function reqUrlParam(paras) {
+            var url = location.href;
+            var paraString = url.substring(url.indexOf("?") + 1, url.length).split("&");
+            var paraObj = {}
+            for (i = 0; j = paraString[i]; i++) {
+                paraObj[j.substring(0, j.indexOf("=")).toLowerCase()] = j.substring(j.indexOf("=") + 1, j.length);
+            }
+            var returnValue = paraObj[paras.toLowerCase()];
+            if (typeof (returnValue) == "undefined") {
+                return "";
+            } else {
+                return returnValue;
+            }
+        }
+        function setCurUrlClass() {
+            // css : class = "color_tj"
+            var pathname1 = window.location.pathname;
+            $("a[href='" + pathname1 + "'").addClass("color_tj");
+        }
+        if ($("#pjCount").length > 0) {
+            $.get("/productpj/GetPJCount", function (data) {
+                $("#pjCount").text(data);
+            });
+        }
+        $(function () {
+            $.get("/Home/GetLoginUserId", null, function (data) {
+                userId = data;
+            }, "json");
+        });
+
+    </script>
+
+</body></html>

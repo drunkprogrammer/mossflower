@@ -1,0 +1,53 @@
+ body {
+            min-width: 1200px;
+        }
+
+        .categorys .dropdown-cate {
+            height: 440px;
+        }
+
+        .beian {
+            width: 16px;
+            height: 16px;
+            background: url(//img02.hua.com/pc/pimg/beian.png) no-repeat;
+            background-size: 16px;
+            margin: -3px 2px 0;
+        }
+  .app-wx-wrapper .app-download {
+            width: 334px;
+            text-align: left;
+            padding-left: 0;
+        }
+
+            .app-wx-wrapper .app-download img {
+                margin-left: 13px;
+                margin-right: 19px;
+            }
+
+        .app-wx-wrapper .cartoon {
+            width: 466px;
+        }
+
+        .app-wx-wrapper .weixin {
+            width: 390px;
+        }
+
+        .app-wx-wrapper .cartoon img {
+            margin: 13px auto;
+        }
+
+        .app-wx-wrapper .weixin img {
+            margin-right: 20px;
+            margin-left: 18px;
+        }
+
+        .app-wx-wrapper .app-download, .app-wx-wrapper .weixin {
+            padding: 25px 0px 20px 20px;
+        }
+
+       .product-title{
+    	    display: block;
+    	    text-overflow: ellipsis;
+    	    overflow: hidden;
+    	    white-space: nowrap;
+    	}
